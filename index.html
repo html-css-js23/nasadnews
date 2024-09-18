@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <title>NASAD News</title>
-  <head>
+<head>
+    <title>NASAD News</title>
     <link rel="stylesheet" href="css/indexstyle.css">
     <link rel="icon" type="image/x-icon" href="images/onlylogonbg.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
     <img class="baseimg" src="images/baselogonbg.png" width="128" height="50">
     <div class="button-container">
         <div class="container">
             <div class="vertical-center">
-              <!--dont forget to remove .html when uploading to main website. use .html when in VSC.-->
-                <a href="podcasts" class="button glow-button montserrat2">Our Podcasts</a>
+                <a href="podcasts.html" class="button glow-button montserrat2">Our Podcasts</a>
             </div>
         </div>
     </div>
     <div class="button-container2"></div>
-        <div class="container2"></div>
-            <div class="vertical-center2">
-              <!--dont forget to remove .html when uploading to main website. use .html when in VSC.-->
-                <a href="coming-soon" class="button2 glow-button2 montserrat2">More</a>
-            </div>
-        </div>
+    <div class="container2"></div>
+    <div class="vertical-center2">
+        <a href="#" class="button2 glow-button2 montserrat2" onclick="toggleSidebar()">More</a>
     </div>
-    <br></br>
-    <h1 class="head1 montserrat">Nord Anglia International School Abu Dhabi</h1>
-    <h1 class="head1 montserrat">Podcast</h1>
-  </head>
-  <body>
-  </body>
-</html>
 
-<script>
-  
-</script>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <a href="#" class="closebtn" onclick="toggleSidebar()">×</a>
+        <a href="books.html">Books</a>
+        <a href="coming-soon.html">Coming Soon</a>
+    </div>
+
+    <div id="main">
+        <h1 class="head1 montserrat">Nord Anglia International School Abu Dhabi</h1>
+        <h1 class="head1 montserrat">Podcast</h1>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            if (sidebar.style.width === '250px') {
+                sidebar.style.width = '0';
+            } else {
+                sidebar.style.width = '250px';
+            }
+        }
+    </script>
+</body>
+</html>
