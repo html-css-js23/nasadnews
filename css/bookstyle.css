@@ -1,0 +1,15 @@
+.head1 {
+    text-align: center;
+    color: black;
+}
+html {
+    background-color: #ffffff;
+  }
+
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
