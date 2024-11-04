@@ -1,4 +1,4 @@
-.head1 {
+	.head1 {
     text-align: center;
     color: black;
 }
@@ -49,4 +49,23 @@ html {
     display: inline-block;
     margin: 10px 5px; /* Slight margin between buttons */
     box-sizing: border-box;
+}
+
+.podcast {
+    text-align: center; /* Centers content inside the .podcast div */
+    margin: 20px auto;
+}
+
+.podcast-icon {
+    border-radius: 15px; /* Rounds the corners of the image */
+    border: 2px solid #30ccd6; /* Adds a small border */
+    width: 300px; /* Controls image size for consistency */
+    height: auto;
+    margin-bottom: 20px; /* Adds spacing between image and buttons */
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 10px; /* Adds space between buttons */
 }
