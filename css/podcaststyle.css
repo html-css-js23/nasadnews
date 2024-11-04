@@ -13,3 +13,40 @@ html {
   font-weight: 900;
   font-style: normal;
 }
+
+/* bookstyle.css */
+
+.button {
+    text-decoration: none;
+    color: #111a29;
+    background: #30ccd6;
+    padding: 12px 30px; /* Consistent padding */
+    border-radius: 10px; /* Rounded corners */
+    font-weight: normal;
+    transition: all 0.4s ease-in-out;
+    text-transform: uppercase;
+    display: block;
+    margin: 10px auto; /* Centers button and adds margin */
+    box-sizing: border-box; /* Includes padding and border in button's width/height */
+    max-width: calc(100% - 40px); /* Avoids touching container edges */
+}
+
+.button:hover {
+    background: #25a3af; /* Slightly darker shade on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Optional styling to apply the .button class to the audio control buttons */
+.audio-controls button {
+    text-decoration: none;
+    color: #111a29;
+    background: #30ccd6;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: normal;
+    transition: all 0.4s ease-in-out;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 10px 5px; /* Slight margin between buttons */
+    box-sizing: border-box;
+}
