@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NASAD News - Podcasts</title>
-  <head>
-    <link rel="stylesheet" href="css/podcaststyle.css">
-    <link rel="icon" type="image/x-icon" href="images/podcast.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <h1 class="head1 montserrat">First podcast coming on the week of 23/09/2024 👀</h1>
-    <a href="/" class="head1 glow-button montserrat">Back to home</a>
-  </head>
+  <link rel="stylesheet" href="css/bookstyle.css">
+  <link rel="icon" type="image/x-icon" href="images/books.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&display=swap" rel="stylesheet">
+  <style>
+    .podcast-icon {
+      max-width: 300px;
+      max-height: 5300px;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="head1 montserrat">NASAD News - Podcasts</h1>
+  <a href="/" class="head1 glow-button montserrat">Back to home</a>
+
+  <!-- Podcast Section -->
+  <div class="podcast">
+    <img src="images/nasadpodcasts.png" alt="Podcast Icon" class="podcast-icon">
+    <div class="audio-controls">
+      <audio id="audio1" src="/geometry_dash.mp3"></audio>
+      <button onclick="rewind('audio1')">⏪ Go Back 15s</button>
+      <button onclick="togglePlayPause('audio1')">▶️ Play/Pause</button>
+      <button onclick="forward('audio1')">⏩ Forward 15s</button>
+    </div>
+  </div>
+  
+
+  <script>
+    // Function to toggle play/pause
+    function togglePlayPause(audioId) {
+      const audio = document.getElementById(audioId);
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    // Function to rewind 15 seconds
+    function rewind(audioId) {
+      const audio = document.getElementById(audioId);
+      audio.currentTime = Math.max(0, audio.currentTime - 15);
+    }
+
+    // Function to forward 15 seconds
+    function forward(audioId) {
+      const audio = document.getElementById(audioId);
+      audio.currentTime = Math.min(audio.duration, audio.currentTime + 15);
+    }
+  </script>
+</body>
 </html>
